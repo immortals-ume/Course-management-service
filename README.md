@@ -390,7 +390,7 @@ ingress.networking.k8s.io/keycloak-ingress nginx keycloak.local 192.168.49.2 80 
 ingress.networking.k8s.io/prometheus-ingress nginx prometheus.local 192.168.49.2 80 2m44s
 ```
 
-![Tilt web page](design/images/tilt.png)
+[//]: # (![Tilt web page]&#40;design/images/tilt.png&#41;)
 ---
 
 # Check the endpoints
@@ -454,7 +454,7 @@ Create realm using `course-management-realm-realm.json` provided in the repo
 - Import Realm → Click "Import", select couse-management-realm-realm.json, and click "Create"
 - Verify → Check Clients, Users, Roles, and Mappers in the new realm
 
-![Keycloak web page](design/images/keycloak.png)
+[//]: # (![Keycloak web page]&#40;design/images/keycloak.png&#41;)
 
 ### Keycloak Users in `course-management-realm`
 
@@ -490,18 +490,21 @@ We have **3** users configured in **Keycloak** with the following credentials an
 >"scope": "openid email profile"
 >}
 >```
-> ![Jwt web page](design/images/jwt.png)
+
+[//]: # (> ![Jwt web page]&#40;design/images/jwt.png&#41;)
 ---
 
 # Observability
 
 - **Prometheus**:
     - Open the browser - http://prometheus.local and make sure all the 4 microservices health status is listed
-      ![Prometheus web page](design/images/prometheus.png)
+
+[//]: # (      ![Prometheus web page]&#40;design/images/prometheus.png&#41;)
 
 > [!TIP]
 > Hit - http://127.0.0.1/actuator/prometheus in your browser and check all the metrics at one place
-> ![prometheus metrics](design/images/metrics.png)
+
+[//]: # (> ![prometheus metrics]&#40;design/images/metrics.png&#41;)
 
 - **Fluent-bit**
     - Make sure fluent bit is running and listening on 0.0.0.0:24224
@@ -624,22 +627,30 @@ Visualize data from Loki, Tempo, and Prometheus using dashboards.
 
 ---
 
-### Spring Boot Observability Dashboard
+[//]: # (### Spring Boot Observability Dashboard)
 
-![Observability Dashboard](/design/images/observability.png)
+[//]: # ()
+[//]: # (![Observability Dashboard]&#40;/design/images/observability.png&#41;)
 
-### Spring Boot Statistic Dashboard
+[//]: # ()
+[//]: # (### Spring Boot Statistic Dashboard)
 
-![Observability Dashboard](/design/images/statistic.png)
+[//]: # ()
+[//]: # (![Observability Dashboard]&#40;/design/images/statistic.png&#41;)
 
-### Tempo Traces
+[//]: # ()
+[//]: # (### Tempo Traces)
 
-![Tempo trace](/design/images/tempo1.png)
-![Tempo trace](/design/images/tempo2.png)
+[//]: # ()
+[//]: # (![Tempo trace]&#40;/design/images/tempo1.png&#41;)
 
-### Loki Logs
+[//]: # (![Tempo trace]&#40;/design/images/tempo2.png&#41;)
 
-![Loki Logs](/design/images/loki.png)
+[//]: # ()
+[//]: # (### Loki Logs)
+
+[//]: # ()
+[//]: # (![Loki Logs]&#40;/design/images/loki.png&#41;)
 
 ---
 
