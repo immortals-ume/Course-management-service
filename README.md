@@ -15,13 +15,38 @@
 
 # Background
 
-A foundational framework for building **Spring Boot**-based microservices, designed for a **modular**, **scalable**, and
-**observable** system to manage **courses** and **reviews**. It incorporates **Spring Security** with **OAuth 2.0** via
-**Keycloak** for **authentication** and **Spring Cloud Gateway** as the **API gateway**. The architecture integrates a
-modern **observability stack**, including **OpenTelemetry (OTel)**, **Grafana**, **Loki**, **Tempo**, and **Prometheus
-**. **MongoDB** and **PostgreSQL** serve as **persistent storage** solutions. Deployment is supported through **Docker
-Compose** for **local environments** and **Kubernetes** for **scalable deployments**. The system utilizes **Spring Boot
-** and **Spring Cloud** to enable seamless **microservices communication**, **security**, and **observability**.
+A robust foundational framework for developing Spring Boot-based microservices, tailored for building a **modular**, **scalable**, and **observable** course and review management system.
+
+## 🔐 Security
+- Integrated **Spring Security** with **OAuth 2.0** via **Keycloak** for secure authentication and authorization.
+- Uses **Spring Cloud Gateway** as the API gateway for intelligent request routing and centralized access control.
+
+## 📊 Observability Stack
+The system is fully instrumented for observability using:
+- **OpenTelemetry (OTel)** – for collecting traces and metrics
+- **Grafana** – for visualization and dashboards
+- **Loki** – for log aggregation
+- **Tempo** – for distributed tracing
+- **Prometheus** – for monitoring and alerting
+
+## 💾 Data Persistence
+- **MongoDB** – for flexible, document-based data storage
+- **PostgreSQL** – for structured, relational data requirements
+
+## 🚀 Deployment
+- **Docker Compose** – for simplified local development and testing
+- **Kubernetes** – for scalable, production-ready deployments
+
+## ☁️ Microservices Communication
+Built on **Spring Boot** and **Spring Cloud** to ensure:
+- Seamless inter-service communication
+- Robust security
+- End-to-end observability across the system
+
+---
+
+This framework serves as a solid foundation for teams building modern, cloud-native applications with a strong emphasis on maintainability, scalability, and operational insight.
+
 
 # Container Diagram
 
