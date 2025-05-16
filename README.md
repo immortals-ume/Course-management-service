@@ -1,4 +1,4 @@
-# Mangement System
+# Course-management-service
 
 ## Table of Contents
 
