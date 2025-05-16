@@ -1,7 +1,10 @@
 openapi: 3.0.3
 info:
-  title: apis
+  title: Course Management API
   version: 1.0.0
+  description: >
+    This API allows users to authenticate using Keycloak and perform operations
+    related to course creation, review submission, and fetching course details with reviews.
   contact: {}
 servers:
   - url: http://localhost:8081
@@ -9,9 +12,11 @@ servers:
 paths:
   /realms/course-management-realm/protocol/openid-connect/token:
     post:
-      summary: AccessToken
-      description: ''
-      operationId: accesstoken
+      summary: Obtain Access Token
+      description: >
+        This endpoint allows users to authenticate via Keycloak using Resource Owner Password Credentials Grant
+        and obtain a JWT access token.
+      operationId: getAccessToken
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -47,13 +52,14 @@ paths:
                   username: kapil
       responses:
         '200':
-          description: ''
+          description: Successfully retrieved access token
       security:
         - {}
   /courses:
     post:
-      summary: Add Course
-      description: ''
+      summary: Create a New Course
+      description: >
+          This endpoint allows authenticated users to create a new course by providing the title, author, publisher, and price.
       operationId: addCourse
       requestBody:
         content:
@@ -82,13 +88,14 @@ paths:
                   title: Microservices with Quarkus
       responses:
         '200':
-          description: ''
+          description: Course created successfully
       security:
         - bearerAuth: []
   /reviews:
     post:
-      summary: Add Review
-      description: ''
+      summary: Submit a Review for a Course
+      description: >
+          This endpoint allows authenticated users to submit a review for an existing course by specifying author, content, courseId, and email.
       operationId: addReview
       requestBody:
         content:
@@ -117,14 +124,15 @@ paths:
                   email: abc@xyz.com
       responses:
         '200':
-          description: ''
+          description: Review added successfully
       security:
         - bearerAuth: []
   /course-aggregate/4/with-details:
     get:
-      summary: Course-Composite
-      description: ''
-      operationId: courseComposite
+      summary: Get Course Details with Reviews
+      description: >
+        This endpoint retrieves a course's full details along with all associated user reviews.
+      operationId: getCourseComposite
       parameters:
         - name: ''
           in: header
@@ -133,7 +141,7 @@ paths:
             example: ''
       responses:
         '200':
-          description: ''
+          description: Successfully retrieved course and associated reviews
       security:
         - bearerAuth: []
 components:
