@@ -11,7 +11,6 @@
 - [Observability](#observability)
 - [Guide to grafana](#guide-to-grafana)
 - [Verify the APIs](#verify-the-apis)
-- [Troubleshoot & Tips](#troubleshoot-and-tips)
 
 # Background
 
